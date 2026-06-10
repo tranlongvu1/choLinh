@@ -1,55 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: rgb(240, 215, 215);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.gif {
-  height: 100%;
-  width: 100%;
-}
-
-h2 {
+  background: linear-gradient(to right, #ffe0ec, #ffe4b5);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  font-size: 1.5em;
-  color: #e94d58;
-  margin: 15px 0;
+  padding: 40px;
 }
-.btn-group {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+
+.container {
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.6);
+  display: inline-block;
 }
+
+h1 {
+  color: #ff69b4;
+}
+
+.message {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #555;
+}
+
 button {
-  position: absolute;
-  width: 150px;
-  height: inherit;
-  color: white;
-  font-size: 1.2em;
-  border-radius: 30px;
-  outline: none;
+  background-color: #ffb6c1;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 2px 4px gray;
-  border: 2px solid #e94d58;
-  font-size: 1.2em;
+  color: white;
+  transition: 0.3s;
 }
-button:nth-child(1) {
-  margin-left: -px;
-  background: #e94d58;
+
+button:hover {
+  background-color: #ff69b4;
 }
-button:nth-child(2) {
-  margin-right: -200px;
-  background: white;
-  color: #e94d58;
+
+#extra img {
+  width: 150px;
+  margin-top: 15px;
+}
+.heart {
+  position: fixed;
+  top: -2em;
+  font-size: 2em;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
